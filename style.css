@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica';
+}
+
+body {
+  background-image: linear-gradient(120deg, rgba(255, 229, 85, 0.692), rgba(255, 189, 134, 0.692));
+  color: rgb(255, 255, 255);
+  min-height: 100vh;
+}
+header {
+  font-size: 1.5rem;
+}
+header, form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input, form button{
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+}
+form input{
+  background-image: linear-gradient(120deg, rgba(85, 255, 142, 0.575), rgba(255, 255, 255, 0.562));
+}
+form button{
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  color: rgba(85, 255, 142, 0.514);
+  transition: all 0.40s ease;
+
+}
+form button:hover{
+  background-color: rgba(85, 255, 93, 0.356);
+  color: rgb(255, 255, 255);
+  
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+.todo {
+  margin: 0.5rem;
+  font-size: 1.1rem;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .5s ease;
+}
+.complete-btn, .trash-btn {
+  cursor: pointer;
+  border: none;
+  padding: .8rem;
+  font-size: .8rem;
+}
+.complete-btn {
+  background-color: rgba(85, 255, 142, 0.863);
+  color: rgb(255, 255, 255);
+}
+.trash-btn {
+  background-color: rgba(255, 110, 85, 0.788);
+  color: rgb(255, 255, 255);
+}
+.todo li {
+  flex: 1;
+}
+.todo-item {
+  padding: 0rem 0.9rem;
+}
+.fa-trash, .fa-check {
+  pointer-events: none;
+}
+.fall {
+  transform: translateX(18rem) rotateZ(90deg);
+  opacity: 0;
+}
+.complete {
+  opacity: .3;
+}
+select { /* this is to unstyle everything on the select element, which is a complex element for css*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: rgb(250, 157, 114);
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: rgb(250, 157, 114);
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.40s ease;
+}
+.select:hover::after {
+  background: white;
+  color: rgb(250, 157, 114);
+}
